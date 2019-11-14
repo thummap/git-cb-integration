@@ -6,12 +6,35 @@ package com.aetna.hc.rewards.aetna.aetnarewardrules;
 
 public class HrInfo implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public HrInfo() {
-    }
+	@org.kie.api.definition.type.Label(value = "Tenant")
+	private java.lang.String tenant;
+	@org.kie.api.definition.type.Label(value = "Employment Status")
+	private java.lang.String status;
 
+	public HrInfo() {
+	}
 
+	public java.lang.String getTenant() {
+		return this.tenant;
+	}
 
+	public void setTenant(java.lang.String tenant) {
+		this.tenant = tenant;
+	}
+
+	public java.lang.String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
+	public HrInfo(java.lang.String tenant, java.lang.String status) {
+		this.tenant = tenant;
+		this.status = status;
+	}
 
 }
